@@ -29,4 +29,27 @@ If the unit does not power on any PD Supplies it could be damage to the PD PHY o
 
 ## If the unit powers up but keeps rebooting
 
-In this case the rebooting is from the PD negotiation failing.
+There are two causes of this, if the reboot occurs when the unit starts to heat up, then it is the power supply being unable to supply the power requested.
+
+However, generally, the issue is that the unit reboots frequently even without any buttons being pressed.
+
+If this is the issue that you are seeing; then the issue is that something during the PD initalisation is failing.
+
+The _best_ way to resolve this is to be able to capture the USB PD traffic. This is the only way to know what is **really** going on and why the two devices cant negotiate.
+
+To capture PD traffic requires a device that can capture this data. A logic analyser can be used on the CC pins, though note that the signallying voltage is < 3.3V so it will require a logic analser that can handle this or buffering.
+
+Alternatively a lot of the higher end usb power meter units can capture the packets. It doesnt matter if it only shows these on screen or if it can save these out to a file (Ideally a file though).
+
+**Without a traffic capture, all debugging is guessing**
+
+On firmwares 2.23+ there is a toggle in advanced settings to change the PD mode. This will adjust how the firmware negotiates with the PD supply slightly. This can enable/disable the PPS and EPR modes (dynamic voltage negotiation).
+
+PPS is known to be incorrectly implemented on some supplies, so turning off these features can improve compatibility.
+
+If the device is _sometimes_ stable, you can on Pinecil devices boot while holding the front button to enter the PD debug menu. This will show what voltages & power levels are being advertised by the device. This can be used to cross check with what is printed on the adaptor. Take into consideration that non e-marked cables will be limited to 3A and that EPR requires specifically marked cables.
+
+If you take the tip out of the iron, it will result in most devices not negotiating a PD profile (the Iron's wait to know what kind of tip is installed). This can be used to stop the failing negotiations in some situations to allow viewing this menu.
+
+
+Before filing a support request, please try testing other power adaptors & cables to try and narrow down the possibilities of the issue being a one-off.
