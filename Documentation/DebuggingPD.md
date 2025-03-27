@@ -8,6 +8,11 @@ There are generally a few different reasons for this to occur, the first is of c
 
 It also helps to remember that driving a soldering iron is not like a normal load that these power supplies are designed for. Normally a laptop or phone will gently ramp the power draw up and down. Where as the soldering iron will rapidly go from 0 to full power, and then back to 0 again. This can cause issues with some power supplies tripping out.
 
+In general a normal, boring 60-100W PD supply is reccomended. Watch out for adaptors with multiple ports that are used by marketing to advertise a higher number. Its somewhat common to see 65W adaptors being pushed that have two ports, one of which is 45W and one that is 20W. These cannot support 65W output on one typically.
+
+Smarter chargers that try to implement every known protocol and this can come with quirks. Often slight shortcuts are taken in the PD implementation that can cause hard to debug issues.
+
+
 ## If the unit doesnt power up at all
 
 This can be the most frustrating one to diagnose.
@@ -53,3 +58,4 @@ If you take the tip out of the iron, it will result in most devices not negotiat
 
 
 Before filing a support request, please try testing other power adaptors & cables to try and narrow down the possibilities of the issue being a one-off.
+If you have the capability to capture the PD traffic, that makes the problem exponentially easier to rectify.
