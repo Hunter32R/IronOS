@@ -142,7 +142,7 @@
 
 #ifdef MODEL_TS80P
 // TS80P pin map
-#define INT_PD_Pin       GPIO_PIN_9
+#define INT_PD_Pin       GPIO_PIN_10
 #define INT_PD_GPIO_Port GPIOA
 
 #endif
