@@ -77,6 +77,13 @@
 #define SCL_GPIO_Port         GPIOB
 #define SDA_Pin               GPIO_PIN_1
 #define SDA_GPIO_Port         GPIOB
+// PD controller
+#define SCL2_Pin         GPIO_PIN_6
+#define SCL2_GPIO_Port   GPIOB
+#define SDA2_Pin         GPIO_PIN_5
+#define SDA2_GPIO_Port   GPIOB
+#define INT_PD_Pin       GPIO_PIN_7
+#define INT_PD_GPIO_Port GPIOB
 // Selecting the DC source to route to theg
 #define DC_SELECT_Pin       GPIO_PIN_4
 #define DC_SELECT_GPIO_Port GPIOB
