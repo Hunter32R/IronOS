@@ -62,6 +62,8 @@
 #define VIN_GPIO_Port         GPIOA
 #define VIN_ADC1_CHANNEL      ADC_CHANNEL_5
 #define VIN_ADC2_CHANNEL      ADC_CHANNEL_5
+#define OLED_RESET_Pin        GPIO_PIN_7
+#define OLED_RESET_GPIO_Port  GPIOA
 #define KEY_A_Pin             GPIO_PIN_9
 #define KEY_A_GPIO_Port       GPIOB
 #define PWM_Out_Pin           GPIO_PIN_1
