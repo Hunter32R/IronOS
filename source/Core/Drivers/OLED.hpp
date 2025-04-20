@@ -48,7 +48,7 @@ extern "C" {
 
 #define OLED_VCOM_LAYOUT 0x12
 #define OLED_SEGMENT_MAP_REVERSED
-#define OLED_DIVIDER 0xD3
+#define OLED_DIVIDER 0x00
 
 #else
 
